@@ -11,16 +11,15 @@ const BookModel = ({ book, onClose }) => {
                     {book.publishYear}
                 </h2>
                 <h4 className='my-2 text-gray-500'>{book._id}</h4>
-                <div className="flex justify-start book-center gap-x-2">
+                <div className="flex justify-start text-center gap-x-2">
                     <PiBookOpenTextLight className='text-red-300 text-2xl' />
                     <h2 className='my-1'>{book.title}</h2>
                 </div>
-                <div className="flex justify-start book-center gap-x-2">
+                <div className="flex justify-start text-center gap-x-2">
                     <BiUserCircle className='text-red-300 text-2xl' />
                     <h2 className='my-1'>{book.author}</h2>
                 </div>
-                <p className='mt-4'>Any thing to show</p>
-                <p className='my-2'>Hello</p>
+                <p className='flex text-justify gap-2'>{book.summary}</p>
             </div>
         </div>
     )

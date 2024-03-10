@@ -13,7 +13,7 @@ const ShowBook = () => {
 
   useEffect(() => {
     setLoading(true);
-    axios.get(`http://localhost:5555/books/${id}`).then((res) => {
+    axios.get(`https://book-tracker-krc4.onrender.com/books/${id}`).then((res) => {
       setBook(res.data);
       enqueueSnackbar("Book Displayed Successfully", { variant: 'success' });
       setLoading(false);
@@ -47,6 +47,10 @@ const ShowBook = () => {
           <div className="my-4">
             <span className='text-xl mr-4 text-gray-400'>Publish Year</span>
             <span>{book.publishYear}</span>
+          </div>
+          <div className="my-4">
+            <span className='text-xl mr-4 text-gray-400'>Publish Year</span>
+            <span>{book.summary}</span>
           </div>
           <div className="my-4">
             <span className='text-xl mr-4 text-gray-400'>Create Time</span>
